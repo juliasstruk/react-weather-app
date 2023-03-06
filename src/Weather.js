@@ -12,9 +12,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       data: "Wednesday 07:00",
       description: response.data.weather[0].description,
-      iconUrl:
-        "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-      wind: response.data.main.wind.speed,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      wind: response.data.wind.speed,
       city: response.data.name,
     });
   }
@@ -73,8 +72,8 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "e5c2757f7c28e9aed7d744b591dfdeb";
-    let apiUrl = `https://api.openweathermap.org/data/3.0/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    const apiKey = "1a2b7258ebd456c01aef9175dfe8b709";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "loading...";
