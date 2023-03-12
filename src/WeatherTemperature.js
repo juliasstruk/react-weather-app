@@ -41,8 +41,7 @@ if (unit === "celsius"){
 <span className="unit">
     <a href="/" onClick={showCelcius}>
         °C
-    </a> {" "}
-    | °F
+    </a> {" "}| °F
 </span>
         </div>
     )
